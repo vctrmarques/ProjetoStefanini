@@ -16,7 +16,10 @@ O objetivo dessa aplicação é permitir mostrar o cadastro de Usuario a partir 
 ###*Mostra a tela de login*
 http://localhost:8080/ProjetoStefanini/login.jsf
 
+
 ###Realiza o primeiro cadastro ou edita um usuario selecionado na tela mostraUsuario.jsf
+
+tela principal.
 http://localhost:8080/ProjetoStefanini/usuario.jsf
 
 ###Ao logar, lista os usuarios cadastrados
