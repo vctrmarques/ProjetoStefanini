@@ -14,13 +14,13 @@ O objetivo dessa aplicação é permitir mostrar o cadastro de Usuario a partir 
 ##*Roteiro básico de manuseio das telas do sistema.*
 
 ###*Mostra a tela de login*
-http://localhost:8080/sefaz/login.jsf
+http://localhost:8080/ProjetoStefanini/login.jsf
 
 ###Realiza o primeiro cadastro ou edita um usuario selecionado na tela mostraUsuario.jsf
-http://localhost:8080/sefaz/usuario.jsf
+http://localhost:8080/ProjetoStefanini/usuario.jsf
 
 ###Ao logar, lista os usuarios cadastrados
-http://localhost:8080/sefaz/mostrarUsuario.jsf
+http://localhost:8080/ProjetoStefanini/mostrarUsuario.jsf
  
  ##Roteiro básico de instalação
 
