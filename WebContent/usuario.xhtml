@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+	<title>Cadastro de Usuários</title>
+</h:head>
+<h:body>
+<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong>Cadastro de Usuario</strong>
+		</div>
+		<div class="panel-body">
+			<h:outputText value="Usuário ou senha incorretos!"
+				rendered="#{param.erro}" style="color: darkred" />
+			<h:form id="form" name="form" class="form-horizontal" style="margin: 10px">
+				<div class="form-group">
+					<fieldset>
+						<div class="form-group row">
+							<div class="col-md-2">
+								<h:inputText type="text" class="form-control input-sm" id="id" size="3"
+									readOnly="true" value="#{usuarioBean.usuario.id}"/>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Nome</h:outputLabel>
+								<h:inputText id="nome" class="form-control input-sm"
+									value="#{usuarioBean.usuario.nome}" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>E-mail</h:outputLabel>
+								<h:inputText id="email" class="form-control input-sm"
+									maxlength="50" value="#{usuarioBean.usuario.email}" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Sexo</h:outputLabel>
+								<h:inputText id="sexo" class="form-control input-sm"
+									value="#{usuarioBean.usuario.sexo}" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Cpf</h:outputLabel>
+								<p:inputMask id="cpf" value="#{usuarioBean.usuario.cpf}"
+									mask="999.999.999-99" size="16">
+								</p:inputMask>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Nascimento</h:outputLabel>
+								<p:inputMask id="nascimento" value="#{usuarioBean.usuario.nascimento}"
+									mask="99/99/9999" size="16">
+								</p:inputMask>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Naturalidade</h:outputLabel>
+								<h:inputText id="naturalidade" class="form-control input-sm"
+									value="#{usuarioBean.usuario.naturalidade}" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<h:outputLabel>Nacionalidade</h:outputLabel>
+								<h:inputText id="nacionalidade" class="form-control input-sm"
+									value="#{usuarioBean.usuario.nascionalidade}" />
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group row">
+					<h:commandButton value="Salvar" action="#{usuarioBean.salvar}" update="form" class="btn btn-sm btn-primary"/>
+					<h:commandButton type="reset" value="Cancelar" action="#{usuarioBean.limparCampos}" update="form" class="btn btn-sm btn-default"/>
+				</div>
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html> 
